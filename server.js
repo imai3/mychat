@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
     // 新しいメッセージ受信時の処理
     socket.on('new message', (strMessage) => {
         console.log('new message', strMessage);
-        
+
         // 送信元含む全員に送信
         io.emit('spread message', strMessage);
     });
@@ -44,3 +44,14 @@ app.use(express.static(__dirname + '/public'));
 server.listen(PORT, () => {
     console.log('server starts on port: %d', PORT);
 });
+
+/*git command
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M "main"
+git remote add origin https://github.com/imai3/mychat.git
+git push -u origin "main"
+ */
+
+//server    http://localhost:3000/
